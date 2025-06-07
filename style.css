@@ -3,6 +3,7 @@
     --black: #13131a;
     --bg: #252a48;
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    --vidro-base: rgba(255, 255, 255, 0.1);
     font-size: 10px;
 }
 
@@ -15,6 +16,7 @@
     text-transform: capitalize;
     transition: 0.2s linear;
     font-family: "Ubuntu", sans-serif;
+    scroll-behavior: smooth;
 }
 
 section {
@@ -76,10 +78,12 @@ body {
     font-size: 1.7rem;
     cursor: pointer;
     display: inline-block;
+    border-radius: 8px;
 }
 
 .btn:hover {
-    letter-spacing: 0.1rem;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(141, 138, 12, 0.4);
 }
 .home-container {
     background: url("./assets/home-img.png");
@@ -127,6 +131,11 @@ body {
     align-items: center;
     background-color: var(--black);
     gap: 1.5rem;
+    border-radius: 16px;
+}
+
+.about .row img {
+    border-radius: 16px;
 }
 
 .about .row .content {
@@ -147,14 +156,17 @@ body {
 .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .menu .box-container .box {
     text-align: center;
-    border: var(--border);
     padding: 5rem;
     cursor: pointer;
+    border: 1px solid var(--vidro-base);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .menu .box-container .box img {
@@ -180,16 +192,18 @@ body {
 }
 
 .menu .box-container .box:hover {
-    background-color: #f8f8f8;
-}
-.menu .box-container .box:hover > * {
-    color: var(--black);
+    box-shadow: 0 10px 20px rgba(141, 138, 12, 0.4);
+    transform: translateY(-4px) scale(1.05);
 }
 
 .review .box-container .box {
     border: var(--border);
     text-align: center;
     padding: 3rem 2rem;
+    border: 1px solid var(--vidro-base);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .review .box-container .box p {
