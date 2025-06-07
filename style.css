@@ -26,7 +26,12 @@ section {
 }
 
 body {
-    background-color: var(--bg);
+    background: #020024;
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(37, 42, 72, 1) 35%
+    );
 }
 
 .header {
@@ -192,7 +197,7 @@ body {
 }
 
 .menu .box-container .box:hover {
-    box-shadow: 0 10px 20px rgba(141, 138, 12, 0.4);
+    box-shadow: 0 10px 20px rgba(56, 63, 77, 0.4);
     transform: translateY(-4px) scale(1.05);
 }
 
@@ -230,6 +235,11 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.address iframe {
+    border: 1px solid var(--vidro-base);
+    border-radius: 16px;
 }
 
 .footer {
