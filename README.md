@@ -1,4 +1,4 @@
-# **coffee_page**
+# **Auribus - Coffee Shop**
 
 Landing Page Responsiva para Coffee Shop
 
